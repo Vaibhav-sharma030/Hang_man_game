@@ -1,0 +1,125 @@
+/* Importing Google font - Open Sans */
+@import url();
+
+/* Container */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #5E63BA;
+}
+
+.container {
+  display: flex;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  gap: 40px;
+}
+
+/* Hangman Box */
+.hangman-box {
+  text-align: center;
+}
+.hangman-box img {
+  max-width: 270px;
+}
+.hangman-box h1 {
+  font-size: 1.45rem;
+  margin-top: 20px;
+}
+
+/* Game Box */
+.game-box {
+  text-align: center;
+}
+.word-display {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.word-display .letter {
+  width: 28px;
+  border-bottom: 3px solid #000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.word-display .guessed {
+  border-color: transparent;
+}
+.hint-text,
+.guesses-text {
+  font-size: 1.1rem;
+  margin: 15px 0;
+}
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.keyboard button {
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  background: #4a90e2;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.keyboard button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Modal */
+.game-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.6);
+}
+.game-modal .content {
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  width: 320px;
+}
+.game-modal img {
+  max-width: 130px;
+}
+.game-modal h4 {
+  font-size: 1.5rem;
+  margin: 15px 0 5px;
+}
+.game-modal p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+.play-again {
+  margin-top: 15px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
